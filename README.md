@@ -1,6 +1,19 @@
 
 ## Assignment 1 | Session 2
 
+```
+curl --location 'http://localhost:5007/billing' \
+--header 'Content-Type: application/json' \
+--data '{
+    "employeeId": "20576",
+    "address": "lorem ipsum",
+    "address2": "lorem ipsum",
+    "postal": "74600",
+    "city": "KHI",
+    "country": "PAKISTAN"
+}'
+```
+
 - Create a new microservice called billing-service with an HTTP endpoint (POST /billing)
 
 - Send the req.body object we are getting in (POST /shipping) of shipping-service using HTTP request to (POST /billing)
@@ -40,14 +53,3 @@ My employee number is 20576, so I will be running these services on following po
 - shipping-service (5000)
 - users-service (5005)
 - billing-service (5007)
-
-curl --location 'http://localhost:5007/billing' \
---header 'Content-Type: application/json' \
---data '{
-    "employeeId": "20576",
-    "address": "lorem ipsum",
-    "address2": "lorem ipsum",
-    "postal": "74600",
-    "city": "KHI",
-    "country": "PAKISTAN"
-}'
