@@ -1,8 +1,7 @@
 FROM node:20-alpine
 
 WORKDIR /usr/src/app
+COPY server.js ./
 COPY package*.json ./
 
-CMD npm config set cache-min 9999999 \
-    && npm install \
-    && npm run start:dev
+CMD npm i && npm run start:dev
